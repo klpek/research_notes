@@ -106,20 +106,21 @@ For each column in PSSM, the training loss is stll much high. Because the averag
 For the best result of training loss 0.02072:
 $$\sqrt{0.02072/20} =  0.03218$$
 ###### 4.2.5 Explanation and Question
--1. One way style(from PSSM[i-M:i] to predict PSSM[i]) may be not a good method. 
+1. One way style(from PSSM[i-M:i] to predict PSSM[i]) may be not a good method. 
 	> Try two way style(from PSSM[i-M/2:i] and PSSM[i:i+M/2] to predict PSSM[i])
 	> Use the same 1000 sequences in Figure 2 used, compared with Figure 2, don't change much.
--2. Non-conservation position may can't be predicted from arround.
+2. Non-conservation position may can't be predicted from arround.
 	> Improvement: Adopted supervised style NN model.
--3. PSSM[i] may can't be  predicted from PSSM[i-M:i] or (PSSM[i-M/2:i] and PSSM[i:i+M/2])
+3. PSSM[i] may can't be  predicted from PSSM[i-M:i] or (PSSM[i-M/2:i] and PSSM[i:i+M/2])
 	> Improvement: Adopted supervised style NN model.
--4. Whether the predicted representations in conservation positions of PSSM is alike.
+4. Whether the predicted representations in conservation positions of PSSM is alike.
 	> Use 2 sequences wich exist the same family but different superfamily from SCOP database.
 	> Build PSSM by HHblits, extracted predicted representations from NN model(seqs 10000 - medium model).
 	> Observe the result, the predicted representations in conservation positions is different.
--5. Whether the accuracy of the predicted output in conservation positions of PSSM is high.
+5. Whether the accuracy of the predicted output in conservation positions of PSSM is high.
 	> Use NN model(seqs 10000 - medium model), to test 10 PSSM not used to train NN model(seqs 10000 - medium model).
 	> Observe the results by plotting bar chart, the predicted output is much different from the expected output in conservation positions of PSSM.
+
 ###### Improve Direction
 A supervised NN model. 
 Contain elements: RNN, MSA, Supervised
