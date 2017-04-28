@@ -104,7 +104,8 @@ The testing loss don't decrease much, compared with Figre 2.  More data may be n
 The result have some improvements, but it still can't be used for extarct representation.
 For each column in PSSM, the training loss is stll much high. Because the average value of the each position is 0.05.
 For the best result of training loss 0.02072:
-$$\sqrt{0.02072/20} =  0.03218$$
+<img src="http://latex.codecogs.com/gif.latex?\sqrt{0.02072/20} =  0.03218" />
+
 ###### 4.2.5 Explanation and Question
 1. One way style(from PSSM[i-M:i] to predict PSSM[i]) may be not a good method. 
 > Try two way style(from PSSM[i-M/2:i] and PSSM[i:i+M/2] to predict PSSM[i])
