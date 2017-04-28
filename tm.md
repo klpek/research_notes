@@ -120,7 +120,7 @@ $$\sqrt{0.02072/20} =  0.03218$$
 -5. Whether the accuracy of the predicted output in conservation positions of PSSM is high.
 	> Use NN model(seqs 10000 - medium model), to test 10 PSSM not used to train NN model(seqs 10000 - medium model).
 	> Observe the results by plotting bar chart, the predicted output is much different from the expected output in conservation positions of PSSM.
-###### Improve Direct 
+###### Improve Direction
 A supervised NN model. 
 Contain elements: RNN, MSA, Supervised
 ## 5. Result
