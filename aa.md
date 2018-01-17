@@ -22,12 +22,15 @@ distance deviations across all values of G , L , B , and D . N is the total numb
 
 ###### Combining predictions from multiple templates
 <img src="http://www.cattigers.review/usr/uploads/2018/01/3404167006.png" width = "400" height = "50" >
+
 The second term is the single sequence model from the previous section. The first term is the confidence in the alignment i compared to all other alignments. We estimate the first term using:
 <img src="http://www.cattigers.review/usr/uploads/2018/01/2961929866.png" width = "200" height = "70" >
+
 where $$$r_i$$$ is the distance between the equivalent atoms in template i , and $$$σ_i$$$ is the standard
 deviation associated with that distance. The parameter k determines the extent to which predictions with lower standard deviations dominate over those with higher standard deviations, with a value of k = 0 giving all predictions equal weight.
 The restraint potential for a pair of positions, given a set of aligned templates, is then a mixture of Gaussians with weights dependent on the standard deviation:
 <img src="http://www.cattigers.review/usr/uploads/2018/01/4103430950.png" width = "250" height = "100" >
+
 ###### Comparative modeling with spatial restraints
 In previous work,our group previously described an approach to homology modeling that
 uses an input protein sequence, a template protein structure, and an alignment relating the
@@ -47,7 +50,8 @@ are combined with the Rosetta energy function during optimization by adding to t
 calculated energy:
 
 <img src="http://www.cattigers.review/usr/uploads/2018/01/2829765096.png" width = "500" height = "50" >
-The subscript pair i,j denotes a pair of residues i and j , $$$d_{i,j}$$$ is the distance between the Cα atoms of residues i and j , and $$$r_{i,j}$$$ is the restraint operating on those atoms. The probability of this distance given the restraint is estimated using the Gaussian mixture. A weight on the restraint term of 0.1 gives the restraints approximately half the contribution of the Rosetta full-atom energy.
+
+The subscript pair i,j denotes a pair of residues i and j , $$d_{i,j}$$$is the distance between the Cα atoms of residues i and j , and $$r_{i,j}$$ is the restraint operating on those atoms. The probability of this distance given the restraint is estimated using the Gaussian mixture. A weight on the restraint term of 0.1 gives the restraints approximately half the contribution of the Rosetta full-atom energy.
 Restraints with mean distance > 10 Å were discarded in order to speed up evaluation of the restraint score. The restraint potential was also shifted downward by subtracting the value of the potential at 10 Å in order to make the scores negative for structures that agree well with the restraints.
 
 #### Results
@@ -74,6 +78,7 @@ The energies of the resulting models are optimized by all-atom refinement, and t
 
 
 ![20180114151218.png](http://www.cattigers.review/usr/uploads/2018/01/2660108705.png)
+
 ##### Preparation
 Starting from alignments of the query sequence to templates of known structure, which may be generated using remote homologue detection methods such as PsiBlast or HHsearch,or using expert knowledge.
 Probabilistic distance restraints are generated from the weighted input alignments as described previously.
