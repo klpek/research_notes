@@ -17,7 +17,7 @@ burial in the template structure ( B —number of Cβ atoms within 8 Å of the t
 Following the tabulation of the distance deviations, pseudocounts were added to each bin in order to reduce artifacts arising from small counts:
 <img src="http://www.cattigers.review/usr/uploads/2018/01/3661736776.png" width = "450" height = "50" >
 
-$$$P(Δ r | G, L, B, D)$$$ is the distribution of deviations between template and native $$$Cα–Cα$$$ distances given particular values of G , L , B , and D. $$$F (Δ r )$$$ is the observed distribution of
+$P(Δ r | G, L, B, D)$ is the distribution of deviations between template and native $$$Cα–Cα$$$ distances given particular values of G , L , B , and D. $$$F (Δ r )$$$ is the observed distribution of
 distance deviations across all values of G , L , B , and D . N is the total number of observations in the bin, $$$N_{obs} (Δ r | G , L , B , D )$$$ is the number of observations with distance deviation $$$Δ r $$$, $$$N(G, L, B, D)$$$ is the total number of observations with the given values of G, L, B, and D, and C is the number of pseudocounts. Zero-mean Gaussians were fitted to the smoothed distributions in each bin. The 10,000 fitted standard deviations, one for each bin, are the parameters of our model.
 
 ###### Combining predictions from multiple templates
